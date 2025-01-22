@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lala Mamadova</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #fdf6e3;
+            overflow: hidden;
+        }
+        .cover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: #fae1dd;
+            cursor: pointer;
+        }
+        .bubble {
+            font-size: 3rem;
+            color: white;
+            background: #ff6f61;
+            padding: 20px 40px;
+            border-radius: 50%;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .bubble:hover {
+            transform: scale(1.1);
+        }
+        .gallery {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #fffbe7;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <div class="bubble" onclick="showGallery()">Lala Mamadova</div>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <img src="https://placekitten.com/200/200" alt="Maltipoo 1">
+        <img src="https://placekitten.com/201/201" alt="Maltipoo 2">
+        <img src="https://placekitten.com/202/202" alt="Maltipoo 3">
+        <img src="https://placekitten.com/203/203" alt="Maltipoo 4">
+        <img src="https://placekitten.com/204/204" alt="Maltipoo 5">
+    </div>
+
+    <script>
+        function showGallery() {
+            document.querySelector('.cover').style.display = 'none';
+            document.getElementById('gallery').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
